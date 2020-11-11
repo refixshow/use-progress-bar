@@ -6,10 +6,15 @@ const WithProgressBar: FC = ({ children }) => {
 
   const { progress, isInView } = useProgressBar(ref)
 
+  console.log(progress)
+
   return (
-    <div className="wrapper" ref={ref} style={{ position: "relative" }}>
+    <div className="wrapper" ref={ref}>
       {isInView && (
-        <div className="progressBar" style={{ width: `${progress}%` }}></div>
+        <div
+          className="progressBar"
+          style={{ transform: `scaleX(${progress})` }}
+        ></div>
       )}
       {children}
     </div>

@@ -33,10 +33,7 @@ const useProgressBar = (ref: RefObject<HTMLDivElement>) => {
 
         const magicNumber: any = 2
 
-        const percentage: number = 100
-
-        const progress: number =
-          (startPostition / endPostition / magicNumber) * percentage
+        const progress: number = startPostition / endPostition / magicNumber
 
         setProgressBar({ progress, isInView: true })
       } else {

@@ -13,11 +13,13 @@ body {
 .App {
   & .progressBar {
     position: sticky;
-    height: 10px;
+    height: 5px;
     top: 0;
     left: 0;
-    z-index: 10000;
+    z-index: 10000 !important;
     background-color: black;
+    transform-origin: 0 0;
+    transform: scaleX(0.2);
   }
 
   & .tile {
